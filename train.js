@@ -1,4 +1,4 @@
-class Train {
+ class Train {
 
   constructor() {
     this.r = 75;
@@ -17,5 +17,4 @@ class Train {
     // ellipseMode(CORNER);
     // ellipse(this.x, this.y, this.r, this.r);
   }
-
 }

@@ -45,12 +45,14 @@ function draw() {
     trains.push(new Train());
   }
   
-  background(bImg);
+  background(bImg);  
   for (let t of trains) {
     t.move();
     t.show();
     if (unicorn.hits(t)) {
-      console.log('game over');
+      fill(255)
+      textSize(70)
+      text('Game Over!', 215, height/2);
       noLoop();
     }
   }

@@ -1,3 +1,10 @@
+// Daniel Shiffman
+// https://thecodingtrain.com/CodingChallenges/147-chrome-dinosaur.html
+// https://youtu.be/l0HoJHc-63Q
+
+// Google Chrome Dinosaur Game (Unicorn, run!)
+// https://editor.p5js.org/codingtrain/sketches/v3thq2uhk
+
 class Unicorn {
   
   constructor() {
@@ -20,6 +27,13 @@ class Unicorn {
     let x2 = train.x + train.r * 0.5;
     let y2 = train.y + train.r * 0.5;
     return collideCircleCircle(x1, y1, this.r, x2, y2, train.r);
+  }
+  hits(cars) {
+    let x1 = this.x + this.r * 0.5;
+    let y1 = this.y + this.r * 0.5;
+    let x3 = cars.x + cars.r * 0.3;
+    let y3 = cars.y + cars.r * 0.3;
+    return collideCircleCircle(x1, y1, this.r, x3, y3, cars.r);
   }
 
   move() {
